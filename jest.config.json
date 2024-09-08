@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "testRegex": "/tests/.*(?<!.mock).ts",
+
+  "transform": {
+    "\\.ts$": "ts-jest"
+  }
+}

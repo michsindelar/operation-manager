@@ -1,0 +1,50 @@
+{
+  "name": "operation-manager",
+  "version": "1.0.0",
+  "description": "TypeScript operation management implementation.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    },
+    "./*": {
+      "import": {
+        "default": "./dist/*.js",
+        "types": "./dist/*.d.ts"
+      },
+      "require": {
+        "default": "./dist/*.js",
+        "types": "./dist/*.d.ts"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michsindelar/operation-manager.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --expose-gc ./node_modules/.bin/jest --runInBand"
+  },
+  "author": "Michal Sindelar",
+  "files": [
+    "dist/*"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "event-handler-ts": "^2.0.2"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.4"
+  }
+}
